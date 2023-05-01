@@ -1,4 +1,4 @@
-def call(string repo_url){ 
+def call(String repo_url){ 
 withCredentials([sshUserPrivateKey(credentialsId: env.credential_git, keyFileVariable: 'SSH_KEY')]) {
                     sh """
                         eval `ssh-agent`
