@@ -1,6 +1,6 @@
 def call(String image_name){
  sh'''
- docker build -t $image_name home/ubuntu
+ docker build -t $image_name .
  
  '''
 }
