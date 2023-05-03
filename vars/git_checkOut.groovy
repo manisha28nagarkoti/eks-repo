@@ -4,8 +4,6 @@ withCredentials([sshUserPrivateKey(credentialsId: env.credential_git, keyFileVar
                         eval `ssh-agent`
                         ssh-add $SSH_KEY
                         ssh-keyscan github.com >> ~/.ssh/known_hosts
-                         mkdir nginx
-                         cd nginx
                         git clone $repo_url .
                     """
                 }
